@@ -1,0 +1,42 @@
+﻿<Window x:Class="Prakt8Sav.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prakt8Sav"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="White">
+
+    <DockPanel>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock x:Name="status" Text="Сохранение документа ..." />
+        </StatusBar>
+
+        <StackPanel DockPanel.Dock="Top">
+
+            <ToolBar>
+                <Button Content="Изменить фон" MouseEnter="ChangeEnter"/>
+                <Separator/>
+                <Button Content="Информация о разработчике" MouseEnter="InfoEnter"/>
+                <Separator/>
+                <Button Content="Закрыть" MouseEnter="CloseEnter"/>
+
+            </ToolBar>
+
+            <Menu Background="White" BorderBrush="Navy" BorderThickness="1">
+                <MenuItem Header="_Меню">
+                    <MenuItem Header="_Изменить фон" Click="ChangeBack" MouseEnter="ChangeEnter"/>
+                    <MenuItem Header="_Информация о разработчике" Click="Info" MouseEnter="InfoEnter"/>
+                    <Separator />
+                    <MenuItem Header="_Закрыть" Click="CloseWind" MouseEnter="CloseEnter"/>
+                </MenuItem>
+            </Menu>
+
+            <Label x:Name="info" Content=""/>
+
+        </StackPanel>
+        
+    </DockPanel>
+
+</Window>
